@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0" layoutX="2.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/fondoInicio.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="90.0" layoutY="31.0" text="Bienvenido " />
+      <Label layoutX="40.0" layoutY="59.0" text="Filtrar por lenguaje" />
+      <ComboBox fx:id="CBLenguaje" layoutX="150.0" layoutY="55.0" prefWidth="150.0" />
+      <TableView fx:id="Tabla" layoutX="40.0" layoutY="90.0" prefHeight="258.0" prefWidth="567.0">
+        <columns>
+          <TableColumn prefWidth="185.3333282470703" text="Usuario" />
+          <TableColumn minWidth="0.0" prefWidth="208.00003051757812" text="Género" />
+            <TableColumn prefWidth="172.00002034505212" text="Lenguaje" />
+        </columns>
+      </TableView>
+      <Button fx:id="BotonEditar" layoutX="128.0" layoutY="360.0" mnemonicParsing="false" text="Editar perfil" />
+      <Button fx:id="BotonPDF" layoutX="262.0" layoutY="360.0" mnemonicParsing="false" text="PDF" />
+      <Button fx:id="BotonExcel" layoutX="359.0" layoutY="360.0" mnemonicParsing="false" text="Excel" />
+      <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="42.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/logoInicio.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

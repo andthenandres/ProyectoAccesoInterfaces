@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/fondoLogin.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="321.0" layoutY="68.0" text="Comunidad de programadores" />
+      <Label layoutX="148.0" layoutY="164.0" text="Usuario:" />
+      <Label layoutX="138.0" layoutY="200.0" text="Contraseña:" />
+      <TextField fx:id="TFUsuario" layoutX="209.0" layoutY="160.0" />
+      <TextField fx:id="TFContrasena" layoutX="209.0" layoutY="196.0" />
+      <Button layoutX="191.0" layoutY="302.0" mnemonicParsing="false" text="Login" />
+      <Button layoutX="358.0" layoutY="302.0" mnemonicParsing="false" text="Registrarse" />
+      <ImageView fitHeight="76.0" fitWidth="122.0" layoutX="131.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/logoLogin.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

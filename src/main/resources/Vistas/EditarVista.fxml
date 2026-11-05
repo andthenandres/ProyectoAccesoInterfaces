@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/fondoEditar.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="128.0" layoutY="63.0" text="Editar perfil" />
+      <Label layoutX="159.0" layoutY="113.0" text="Nombre de usuario:" />
+      <Label layoutX="158.0" layoutY="155.0" text="Contraseña:" />
+      <Label layoutX="158.0" layoutY="200.0" text="Genero:" />
+      <Label layoutX="158.0" layoutY="245.0" text="Lenguaje de programacion" />
+      <TextField fx:id="TFUsuario" layoutX="285.0" layoutY="109.0" />
+      <TextField fx:id="TFContrasena" layoutX="285.0" layoutY="151.0" />
+      <RadioButton fx:id="RBHombre" layoutX="229.0" layoutY="200.0" mnemonicParsing="false" text="Hombre">
+         <toggleGroup>
+            <ToggleGroup fx:id="GrupoGenero" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="RBMujer" layoutX="316.0" layoutY="200.0" mnemonicParsing="false" text="Mujer" toggleGroup="$GrupoGenero" />
+      <RadioButton fx:id="RBPrefiero" layoutX="381.0" layoutY="200.0" mnemonicParsing="false" text="Prefiero no decirlo" toggleGroup="$GrupoGenero" />
+      <ComboBox fx:id="CBLenguaje" layoutX="316.0" layoutY="241.0" prefWidth="150.0" />
+      <Button layoutX="269.0" layoutY="328.0" mnemonicParsing="false" text="Guardar cambios" />
+      <Button layoutX="435.0" layoutY="328.0" mnemonicParsing="false" text="Cancelar" />
+      <ImageView fitHeight="32.0" fitWidth="33.0" layoutX="78.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/logoEditar.png" />
+         </image></ImageView>
+   </children>
+</AnchorPane>
