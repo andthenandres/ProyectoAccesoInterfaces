@@ -16,8 +16,8 @@
       <Label layoutX="138.0" layoutY="200.0" text="Contraseña:" />
       <TextField fx:id="TFUsuario" layoutX="209.0" layoutY="160.0" />
       <TextField fx:id="TFContrasena" layoutX="209.0" layoutY="196.0" />
-      <Button layoutX="191.0" layoutY="302.0" mnemonicParsing="false" text="Login" />
-      <Button layoutX="358.0" layoutY="302.0" mnemonicParsing="false" text="Registrarse" />
+      <Button fx:id="BotonLogin" layoutX="191.0" layoutY="302.0" mnemonicParsing="false" text="Login" />
+      <Button fx:id="BotonRegistrar" layoutX="358.0" layoutY="302.0" mnemonicParsing="false" text="Registrarse" />
       <ImageView fitHeight="76.0" fitWidth="122.0" layoutX="131.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/logoLogin.png" />
