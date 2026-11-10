@@ -10,14 +10,19 @@ public class InicioVistaController {
     private ComboBox CBLenguaje;
     @FXML
     private TableView Tabla;
+    @FXML
+    private Button BotonPDF,BotonExcel,BotonEditar;
 
+    @FXML
+    public void initialize() {
 
-    @FXML
-    private Button BotonPDF;
-    @FXML
-    private Button BotonExcel;
-    @FXML
-    private Button BotonEditar;
+        CBLenguaje.getItems().addAll(
+                "Java",
+                "Python",
+                "JavaScript"
+        );
+
+    }
 
 
 

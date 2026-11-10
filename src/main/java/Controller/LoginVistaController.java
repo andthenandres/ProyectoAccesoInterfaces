@@ -131,7 +131,7 @@ public class LoginVistaController {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
 
         alert.setTitle("Titulo de prueba");
-        alert.setContentText();
+        alert.setContentText(labelError);
 
         alert.showAndWait();
     }

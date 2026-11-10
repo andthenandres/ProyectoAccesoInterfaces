@@ -25,8 +25,8 @@
       <RadioButton fx:id="RBMujer" layoutX="316.0" layoutY="200.0" mnemonicParsing="false" text="Mujer" toggleGroup="$GrupoGenero" />
       <RadioButton fx:id="RBPrefiero" layoutX="381.0" layoutY="200.0" mnemonicParsing="false" text="Prefiero no decirlo" toggleGroup="$GrupoGenero" />
       <ComboBox fx:id="CBLenguaje" layoutX="316.0" layoutY="241.0" prefWidth="150.0" />
-      <Button layoutX="269.0" layoutY="328.0" mnemonicParsing="false" text="Guardar cambios" />
-      <Button layoutX="435.0" layoutY="328.0" mnemonicParsing="false" text="Cancelar" />
+      <Button fx:id="BotonGuardar" layoutX="269.0" layoutY="328.0" mnemonicParsing="false" text="Guardar cambios" />
+      <Button fx:id="BotonCancelar" layoutX="435.0" layoutY="328.0" mnemonicParsing="false" text="Cancelar" />
       <ImageView fitHeight="32.0" fitWidth="33.0" layoutX="78.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/logoEditar.png" />
