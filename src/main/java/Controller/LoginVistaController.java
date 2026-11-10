@@ -4,25 +4,30 @@ import DAO.LoginDAO;
 import Entity.Programador;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.util.EventObject;
 
 public class LoginVistaController {
 
     @FXML
-    private TextField TFUsuario;
+    private TextField TFUsuario,TFContrasena;
     @FXML
-    private TextField TFContrasena;
-    @FXML
-    private Button BotonLogin;
-    @FXML
-    private Button BotonRegistrar;
+    private Button BotonLogin,BotonRegistrar;
 
 
 
     @FXML
-    public void BotonLogin(ActionEvent event) {
+    public void iniciarSesion(ActionEvent event) throws IOException {
 
         //Cojo los datos del fxml y le quito los espacios
         String usuario = TFUsuario.getText().trim();
@@ -75,7 +80,7 @@ public class LoginVistaController {
 
             //Si devuelve true lo mandamos a la pantalla de inicio
             if(LoginDAO.loginUsuario(programador)){
-
+                cambiarBotonLogin(event);
             }//Si no le agrego al mensaje de advertencia de la ventana emergente
             else{
                 labelError += "El usuario con el que te intentas logear no existe en la base de datos, introduce correctamente sus datos o registrate con ese user";
@@ -84,12 +89,8 @@ public class LoginVistaController {
         }
 
     }
-    //Funcion para mandar a la pantalla de registro
-    @FXML
-    public void BotonRegistrar(){
 
 
-    }
 
     //func para comprobar campos vacios
     public String comprobarVacio(String labelError, String usuario, String contrasena) {
@@ -115,10 +116,37 @@ public class LoginVistaController {
 
 
     @FXML
-    public void BotonRegistrar(ActionEvent event) {
-
+    public void registrarse(ActionEvent event) throws IOException {
+        cambiarVentana(event, "Vistas/RegistroVista.fxml");
+    }
+    @FXML
+    public void cambiarBotonLogin(ActionEvent event) throws IOException {
+        cambiarVentana(event, "Vistas/InicioVista.fxml");
     }
 
+
+    private void abrirVentanaEmergente(String labelError){
+
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
+        alert.setTitle("Titulo de prueba");
+        alert.setContentText();
+
+        alert.showAndWait();
+    }
+
+    private void cambiarVentana(ActionEvent event, String ruta) throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(ruta));
+        Scene scene = new Scene(fxmlLoader.load(), 520, 440);
+
+        Stage stage = (Stage)((Node)(event.getSource())).getScene().getWindow();
+
+
+        stage.setScene(scene);
+        stage.show();
+    }
 
 
 
