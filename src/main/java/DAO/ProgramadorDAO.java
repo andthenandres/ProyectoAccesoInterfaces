@@ -5,9 +5,31 @@ import com.db4o.ObjectContainer;
 import com.db4o.ObjectSet;
 import util.ConexionBD;
 
-public class RegistroDAO {
+public class ProgramadorDAO {
 
     static ConexionBD conexionBD;
+
+
+    public static boolean loginUsuario(Programador programador){
+
+
+
+        //creo una conexion a la DB4O
+        conexionBD = new ConexionBD();
+
+        //Creo el objectcontainer que levanta la conexion
+        ObjectContainer oc = conexionBD.abrirConexion();
+
+        //Si existe un usuario en la bd4o con esa contra devolvemos true
+        if(comprobarUser(programador)){
+            return true;
+        }
+        else{
+            return false;
+        }
+
+
+    }
 
     public void registrarUsuario(Programador programador){
         //creo una conexion a la DB4O
@@ -17,7 +39,7 @@ public class RegistroDAO {
         ObjectContainer oc = conexionBD.abrirConexion();
 
         //llamo a la funcion para comprobar si existe un usuario asociado con esa contraseña
-        if(comprobarUsuario(programador)){
+        if(comprobarUser(programador)){
             oc.store(programador);
         }
         /*
@@ -29,9 +51,8 @@ public class RegistroDAO {
         }
     }
 
-    //Tengo que comprobar unicamente si existe el usuario (la contraseña no hace falta) TENGO QUE CAMBIAR LA FUNCION
-    public boolean comprobarUsuario(Programador programador){
 
+    public static boolean comprobarUser(Programador programador){
         //creo una conexion a la DB4O
         conexionBD = new ConexionBD();
 
@@ -48,8 +69,8 @@ public class RegistroDAO {
         }
         //Si no, mando un false al controller/service para indicarle que no existen usuarios para logearse
         return false;
-
-
-
     }
+
+
+
 }

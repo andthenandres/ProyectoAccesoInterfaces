@@ -17,5 +17,13 @@ public class EditarVistaController  {
     @FXML
     private Button BotonGuardar, BotonCancelar;
 
+    public void guardarCambios(ActionEvent event){
+
+
+
+    }
+
+
+
 
 }

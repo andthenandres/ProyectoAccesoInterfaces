@@ -1,21 +1,18 @@
 package Controller;
 
-import DAO.LoginDAO;
+import DAO.ProgramadorDAO;
 import Entity.Programador;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.EventObject;
 
 public class LoginVistaController {
 
@@ -79,7 +76,7 @@ public class LoginVistaController {
             programador.setContrasena(contrasena);
 
             //Si devuelve true lo mandamos a la pantalla de inicio
-            if(LoginDAO.loginUsuario(programador)){
+            if(ProgramadorDAO.loginUsuario(programador)){
                 cambiarBotonLogin(event);
             }//Si no le agrego al mensaje de advertencia de la ventana emergente
             else{

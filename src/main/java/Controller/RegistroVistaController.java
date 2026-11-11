@@ -1,5 +1,6 @@
 package Controller;
 
+import Entity.Programador;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -39,13 +40,22 @@ public class RegistroVistaController {
         //Cojo los datos del fxml y le quito los espacios
         String usuario = TFUsuario.getText().trim();
         String contrasena =  TFContrasena.getText().trim();
+        char genero = ' ';
+
 
         //compruebo que no se seleccione opcion en los RB
         if(grupoGenero.getSelectedToggle() == null){
             labelError += "Tienes que seleccionar una opcion de genero";
             error = true;
         }
-
+        //guardo la opcion escogida de los RButtons
+        if(RBHombre.isSelected()){
+            genero = 'H';
+        } else if (RBMujer.isSelected()) {
+            genero = 'M';
+        } else if (RBPrefiero.isSelected()) {
+            genero = 'P';
+        }
 
         //valido que no se seleccione opcion en el combobox y activo el boolean para abrir la ventana emergente
         if(lenguaje == null){
@@ -79,6 +89,15 @@ public class RegistroVistaController {
         }
 
         if(!error){
+
+            Programador programador = new Programador();
+
+            programador.setNombre(usuario);
+            programador.setContrasena(contrasena);
+            programador.setGenero(genero);
+            programador.setLenguaje(lenguaje);
+
+
 
         }
     }

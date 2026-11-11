@@ -1,5 +1,6 @@
 package Controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -25,7 +26,21 @@ public class InicioVistaController {
     }
 
 
+    //funcion para guardar cambios
+    public void guardarCambio(ActionEvent event) {
 
+
+
+    }
+
+
+
+    public void cancelarCambios(){
+
+
+
+
+    }
 
 
 
