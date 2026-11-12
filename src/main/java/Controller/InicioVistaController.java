@@ -25,13 +25,25 @@ public class InicioVistaController {
 
     }
 
+    public void gestionarInicio(){
+        String lenguaje = CBLenguaje.getItems().toString();
+        String labelError = "";
 
-    //funcion para guardar cambios
-    public void guardarCambio(ActionEvent event) {
-
+        if(lenguaje == null){
+            labelError
+        }
 
 
     }
+
+    //funcion para guardar cambios
+    public void hacerPDF(){
+
+    }
+    public void hacerExcel(){
+
+    }
+
 
 
 

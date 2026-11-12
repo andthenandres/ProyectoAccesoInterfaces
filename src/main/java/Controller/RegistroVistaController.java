@@ -48,14 +48,7 @@ public class RegistroVistaController {
             labelError += "Tienes que seleccionar una opcion de genero";
             error = true;
         }
-        //guardo la opcion escogida de los RButtons
-        if(RBHombre.isSelected()){
-            genero = 'H';
-        } else if (RBMujer.isSelected()) {
-            genero = 'M';
-        } else if (RBPrefiero.isSelected()) {
-            genero = 'P';
-        }
+
 
         //valido que no se seleccione opcion en el combobox y activo el boolean para abrir la ventana emergente
         if(lenguaje == null){
@@ -89,6 +82,15 @@ public class RegistroVistaController {
         }
 
         if(!error){
+
+            //guardo la opcion escogida de los RButtons
+            if(RBHombre.isSelected()){
+                genero = 'H';
+            } else if (RBMujer.isSelected()) {
+                genero = 'M';
+            } else if (RBPrefiero.isSelected()) {
+                genero = 'P';
+            }
 
             Programador programador = new Programador();
 

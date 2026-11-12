@@ -9,7 +9,7 @@ public class ProgramadorDAO {
 
     static ConexionBD conexionBD;
 
-
+    //funcion para controlador de la vista
     public static boolean loginUsuario(Programador programador){
 
 
@@ -30,8 +30,8 @@ public class ProgramadorDAO {
 
 
     }
-
-    public void registrarUsuario(Programador programador){
+    //funcion para registrarse controller
+    public static void registrarUsuario(Programador programador){
         //creo una conexion a la DB4O
         conexionBD = new ConexionBD();
 
@@ -39,7 +39,7 @@ public class ProgramadorDAO {
         ObjectContainer oc = conexionBD.abrirConexion();
 
         //llamo a la funcion para comprobar si existe un usuario asociado con esa contraseña
-        if(comprobarUser(programador)){
+        if(!comprobarUser(programador)){
             oc.store(programador);
         }
         /*
